@@ -1,6 +1,9 @@
 """
-Numeric Methods for finding roots of functions.
+Numerical methods for finding roots of functions.
 
 Problem:
-Find solutions of f(x) = 0 
+Find solutions x such that f(x) = 0 
 """
+
+def bisection(function, range):
+    
