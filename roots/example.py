@@ -1,8 +1,5 @@
 from roots import bisection, newton
 from math import sin, cos, exp
-from matplotlib import pyplot
-import numpy
-
 
 def f(x):
     return pow(2.015, -pow(x,3)) - pow(x,4)*sin(pow(x,3)) - 1.984

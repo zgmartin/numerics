@@ -15,12 +15,11 @@ A value is chosen close to the root, then a closer value to the root is calculat
 
 ####Example:
 
-######f(x) = 2.015^(-x^3) - x^4sin(x^3) - 1.984
-
 <img src = "./plot.png">
 
 By inspection of the graph, the root of the function is approximately at the location x = 1.55.
 
+####Results:
 #####Bisection Method:
 interval containing root = [1.5,1.6]
 iterations = 8
@@ -31,4 +30,7 @@ start point = 1.6
 iterations = 3
 root = 1.5191
 
-
+#####Run:
+```
+python example.py
+```
