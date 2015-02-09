@@ -7,14 +7,15 @@ The initial interval is partitioned into two intervals (midpoint = interval/2). 
 A value is chosen close to the root, then a closer value to the root is calculated moving towards the root by the ratio of the function and its derivative evaluated at the initial value. Newton method converges quickly at a rate of , but falls short on non smooth functions, looping, and divergence intervals.   
 
 
-####Method Comparison:
-        Bisection   Newton
-speed     slow       fast
-converge  always   sometimes
+#####Method Comparison:
+|        |Bisection| Newton|
+|--------|---------|-------|
+| speed  | slow    | fast  |
+| converge| always | sometimes|
 
 ####Example:
 
-f(x) = 2.015^(-x^3) - x^4sin(x^3) - 1.984
+######f(x) = 2.015^(-x^3) - x^4sin(x^3) - 1.984
 
 <img src = "./plot.png">
 
