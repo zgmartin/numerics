@@ -1,3 +1,4 @@
+import time
 """
 Numerical methods for finding roots of functions.
 
@@ -9,7 +10,7 @@ def bisection(function, interval, tolerance):
     """
     Splits interval in half and choses side of root until f(x) gets close to zero.   
     """
-    x = (interval[0] + interval[1]) / 2.0
+    x = float(interval[0] + interval[1]) / 2
     
     #checks which side the root lies on 
     if function(interval[0])*function(x)<0:
@@ -24,20 +25,3 @@ def bisection(function, interval, tolerance):
         return bisection(function, interval, tolerance)
 
 
-def derivative(function, x, tolerance):
-    """
-    Numerically computes derivative at specific location. 
-    """
-    return (function(x+tolerance/2) - function(x-tolerance/2)) / 2.0 
-
-def newton(function, derivative, x, tolerance):
-    """
-    Moves x back towards root based on the derivative of the function. 
-    """
-    x = x - function(x)/derivative(x)
-
-    #recursive base tolerance 
-    if abs(function(x)) <= tolerance:
-        return x
-    else:
-        return newton(function, derivative, x, tolerance)
