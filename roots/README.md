@@ -3,7 +3,9 @@
 
 ####Bisection Method:
 The initial interval is partitioned into two intervals.
-`midpoint = interval/2`*separate paragraph* 
+
+`midpoint = interval/2`
+
 Depending on the location of the root, either the right or left side of the partitioned interval is chosen to be the new interval. The process is iterated until the tolerance for f(x) is met. The bisection method coverages slowly at a rate of 1/2, but the method has the advantage of guaranteeing correctness on non smooth and ill behaved functions.
 
 ####Newton Method:
