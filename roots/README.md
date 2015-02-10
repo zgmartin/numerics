@@ -16,20 +16,16 @@ A value is chosen close to the root, then a closer value to the root is calculat
 
 ####Example:
 
-<img src = "./plot.png">
+![plot] (./plot.png?raw=true)
 
 By inspection of the graph, the root of the function is approximately at the location x = 1.55.
 
 ####Results:
-#####Bisection Method:
-interval containing root = [1.5,1.6]
-iterations = 8
-root = 1.5191
-
-#####Newton Method:
-start point = 1.6
-iterations = 3
-root = 1.5191
+|         |Bisection| Newton|
+|---------|---------|---------|
+|interval | [1.5,1.6]| 1.6|
+|iterations| 8       | 3|
+|root      | 1.5191  | 1.5191|
 
 #####Run:
 ```
