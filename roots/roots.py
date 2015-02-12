@@ -28,16 +28,16 @@ def derivative(function, x, tolerance):
     """
     Numerically computes derivative at specific location. 
     """
-    return (function(x+tolerance/2) - function(x-tolerance/2)) / 2.0 
+    return (function(x+tolerance/2) - function(x-tolerance/2)) / tolerance 
 
-def newton(function, derivative, x, tolerance):
+def newton(function, x, tolerance):
     """
     Moves x back towards root based on the derivative of the function. 
     """
-    x = x - function(x)/derivative(x)
+    x = x - function(x)/derivative(function, x, tolerance)
 
     #recursive base tolerance 
     if abs(function(x)) <= tolerance:
         return x
     else:
-        return newton(function, derivative, x, tolerance)
+        return newton(function, x, tolerance)
