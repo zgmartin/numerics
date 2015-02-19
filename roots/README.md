@@ -13,19 +13,19 @@ Depending on the location of the root, either the right or left side of the part
 
 `0 < f(x) < tolerance`
 
- The bisection method coverages slowly at a `quadratic rate`, but the method has the advantage of guaranteeing correctness on non smooth and ill behaved functions.
+The bisection method coverages slowly at a [linear rate](http://en.wikipedia.org/wiki/Bisection_method), but the method has the advantage of guaranteeing correctness on non smooth and ill behaved functions.
 
 ####Newton Method:
 
 `x_n+1 = x_n - f(x_n)/f'(x_n)`
 
-A value is chosen close to the root, then a closer value is calculated by using the ratio of the function and its derivative evaluated at the initial value. Newton method converges quickly at a `linear rate`, but falls short on non smooth functions, looping, and divergence intervals.   
+A value is chosen close to the root, then a closer value is calculated by using the ratio of the function and its derivative evaluated at the initial value. Newton method converges quickly at a [quadratic rate](http://en.wikipedia.org/wiki/Newton%27s_method), but falls short on non smooth functions, looping, and divergence intervals.   
 
 
 #####Method Comparison:
 |        |Bisection| Newton|
 |--------|---------|-------|
-| speed  | quadratic| linear|
+| speed  | linear| quadratic|
 | converge| always | sometimes|
 
 ####Example:
