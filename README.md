@@ -4,7 +4,7 @@
 A collection of Numerical Analysis Methods
 
 ##Root Finding
-![root](./root/root.png)
+![root](./roots/root.png)
 Finds solutions x such that f(x) = 0
 
 ##Integrate 
