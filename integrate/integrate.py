@@ -28,7 +28,7 @@ def generator(seed, size, interval):
 
 def random_uniform(number, interval):
     """
-    A uniformly distributed random number on interval [-10,10]. 
+    A uniformly distributed random number on a given interval. 
     """
 
     return (7 * number) % 2.0*interval - interval
@@ -57,7 +57,12 @@ class Matrix:
             self.data.append([])
             for column in range(columns):
                 self.data[row].append(random.uniform(-1,1))
-    def __
+    
+    def __mul__(self, matrix):
+        result = Matrix(self.rows, matrix.columns)
+        
+        return result
+
     def __str__(self):
         result = ''
 
