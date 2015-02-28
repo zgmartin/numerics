@@ -3,12 +3,12 @@
 
 ##Random Number
 
-Uniform Generator: 
+####Uniform Generator: 
 
 
 ##Matrix
 
-Multiplication
+####Multiplication:
 |       |Estimate|Actual|
 |-------|--------|------|
 |time   |  1 s   |      |
@@ -16,6 +16,6 @@ Multiplication
 
 ##Integration 
 
-Quadrature: 
+####Quadrature: 
 
-Monte Carlo:
+####Monte Carlo:
