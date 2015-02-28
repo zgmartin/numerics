@@ -6,6 +6,7 @@ A collection of methods for integrating functions.
         Monte Carlo  
 """
 import random
+from operator import mul
 
 def generator(seed, size, interval):
     """
@@ -61,6 +62,24 @@ class Matrix:
     def __mul__(self, matrix):
         result = Matrix(self.rows, matrix.columns)
         
+        #multiplication ends when end of 2nd matrix column is reached
+        for column in range(matrix.columns):
+            
+            #gets row from 1st matrix
+            for row in range(self.rows):
+                self_row = self.data[row]
+                
+                #gets column form 2nd matrix
+                matrix_column = []
+                for r in range(matrix.rows):
+                    matrix_column.append(matrix.data[r][column])
+                
+                #sum(multiplication) 1st matrix row and 2nd matrix column 
+                product = map(mul, self_row, matrix_column)
+                sumation = sum(product)
+
+                result.data[row][column] = sumation
+
         return result
 
     def __str__(self):
