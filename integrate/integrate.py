@@ -63,30 +63,28 @@ class Matrix:
         result = Matrix(self.rows, matrix.columns)
         
         #multiplication ends when end of 2nd matrix column is reached
-        for column in range(matrix.columns):
-            
+        for c in range(matrix.columns):
+             
+            #gets column from 2nd matrix
+            column = [matrix.data[r][c] for r in range(matrix.rows)]
+
             #gets row from 1st matrix
-            for row in range(self.rows):
-                self_row = self.data[row]
-                
-                #gets column form 2nd matrix
-                matrix_column = []
-                for r in range(matrix.rows):
-                    matrix_column.append(matrix.data[r][column])
-                
+            for r in range(self.rows):
+                row = self.data[r]
+
                 #sum(multiplication) 1st matrix row and 2nd matrix column 
-                product = map(mul, self_row, matrix_column)
+                product = map(mul, row, column)
                 sumation = sum(product)
 
-                result.data[row][column] = sumation
+                result.data[r][c] = sumation
 
         return result
 
     def __str__(self):
         result = ''
 
-        for row in range(self.rows):
-            result = result + str(self.data[row])+'\n'
+        for row in self.data:
+            result = result + str(row) + '\n'
 
         return result 
 
