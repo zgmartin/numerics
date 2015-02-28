@@ -1,21 +1,21 @@
 #Integration
 
 
-    ##Random Number
+##Random Number
 
-        ####Uniform Generator: 
-
-
-    ##Matrix
-
-        ####Multiplication:
-        |       |Estimate|Actual|
-        |-------|--------|------|
-        |time   |  1 s   |      |
+####Uniform Generator: 
 
 
-    ##Integration 
+##Matrix
 
-        ####Quadrature: 
+####Multiplication:
+|       |Estimate|Actual|
+|-------|--------|------|
+|time   |  1 s   |      |
 
-        ####Monte Carlo:
+
+##Integration 
+
+####Quadrature: 
+
+####Monte Carlo:
