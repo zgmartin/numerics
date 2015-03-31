@@ -7,7 +7,8 @@ Euler Method:
 
 Approximate curve by moving small steps tangential to the initial value.
 
-#####Derivation:
+Derivation:
+
 ```
 y' = [y(t+h) - y(t)] / h
 y(t+h) = y(t) + h * y'
@@ -17,7 +18,8 @@ y(t+h) = y(t) + h * y'
 Ballistics Problem:
 -----------------
 
-#####Problem:
+Problem:
+
 Calculate the total time the bullet is in the air.
 
 ![plot](./velocity.png?raw=true)
