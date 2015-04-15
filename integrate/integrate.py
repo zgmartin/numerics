@@ -24,9 +24,9 @@ def rand(seed):
         yield seed
 
 
-def fast_rand(seeds):
+def deng_fast(seeds):
     """
-    Dang's fast random number.
+    Deng's fast random number.
     """
 
     x = seeds[0]

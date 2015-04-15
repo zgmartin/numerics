@@ -4,11 +4,14 @@ Integration:
 Random Number:
 --------------
 
-Dang's Fast Random Number:
+Deng Fast:
 
 `n = (n-1 + n-2) mod 1`
 
-Generates random numbers based on the remainder of the initial value of two seeds.
+Generates random numbers based on the remainder of the initial value of two seeds. 
+
+That's Deng fast!
+Inspired by professor [Deng](http://en.wikipedia.org/wiki/Yuefan_Deng).
 
 
 
