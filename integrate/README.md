@@ -6,7 +6,7 @@ Random Number:
 
 Dang's Fast Random Number:
 
-__n = (n-1 + n-2) mod 1__
+`n = (n-1 + n-2) mod 1`
 
 Generates random numbers based on the remainder of the initial value of two seeds.
 
