@@ -6,86 +6,81 @@ A collection of methods for integrating functions.
         Monte Carlo  
 """
 import random
+import math
 from operator import mul
+from numpy import linspace
 
-def generator(seed, size, interval):
+
+def rand(seed):
     """
-    Generates a list of random numbers.
+    Random Number Generator:
 
-    inputs:
-        seed: random seed value
-        size: the number of elements in the list
+    A uniformly distributed random number generator on a given interval. 
 
+    Uses Linear Conguance to generate random number. 
     """
+    while 0<1:
+        seed = (1103515245*seed+12345) % math.pow(2,32)
+        yield seed
+
+
+def fast_rand(seeds):
+    """
+    Dang's fast random number.
+    """
+
+    x = seeds[0]
+    y = seeds[1]
+
+    while  0<1:
+        temp = x
+        x = (x + y) % 1.0
+        y = temp
+        yield x
+
+"""
+def trapezoid(function, interval):
+    Trapezoidal Integration:
+
     
-    numbers = []
-
-    for n in range(size):
-        seed = random_uniform(seed,interval)
-        numbers.append(seed)
-
-    return numbers
-
-
-def random_uniform(number, interval):
-    """
-    A uniformly distributed random number on a given interval. 
-    """
-
-    return (7 * number) % 2.0*interval - interval
-
-
-def trapezoid(function):
-    pass
-
-
-def montecarlo(function):
-    pass
-
-
-
-class Matrix:
-    """
-    A random matrix object. 
-    """
-
-    def __init__(self, rows, columns):
-        self.data = []
-        self.rows = rows
-        self.columns = columns
-
-        for row in range(rows):
-            self.data.append([])
-            for column in range(columns):
-                self.data[row].append(random.uniform(-1,1))
+    x = linspace(interval[0], interval[1])
+    h = x[1] - x[0]
     
-    def __mul__(self, matrix):
-        result = Matrix(self.rows, matrix.columns)
-        
-        #multiplication ends when end of 2nd matrix column is reached
-        for c in range(matrix.columns):
-             
-            #gets column from 2nd matrix
-            column = [matrix.data[r][c] for r in range(matrix.rows)]
+    intersum = [f(t)*2 for t in x[1:len(x)-1]]
 
-            #gets row from 1st matrix
-            for r in range(self.rows):
-                row = self.data[r]
+    area = (sum(intersum) + f(x[0]) + f(x[-1]) * h * 0.5
+    
+    return area  
+"""
 
-                #sum(multiplication) 1st matrix row and 2nd matrix column 
-                product = map(mul, row, column)
-                sumation = sum(product)
+def montecarlo(function, iterations, interval):
+    """
+    Monte Carlo Integration:
+        Uses randomness to approximate area under function.
 
-                result.data[r][c] = sumation
+        n/N = a/A 
 
-        return result
+        [n: number of elements under curve]
+        [N: total number elements]
+        [a: area under curve]
+        [A: total area]
+    """
 
-    def __str__(self):
-        result = ''
+    in_count = 0 
 
-        for row in self.data:
-            result = result + str(row) + '\n'
+    for i in range(iterations):
+        x = random.uniform(interval[0],interval[1])
+        y = random.uniform(interval[0],interval[1])
 
-        return result 
+        if function(x) <= y:
+            in_count += 1
+
+    total_area = pow(interval[1]-interval[0],2)
+
+    area = float(in_count/iterations) * total_area
+
+    return area
+
+    
 
 

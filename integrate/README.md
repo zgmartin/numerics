@@ -1,21 +1,31 @@
-#Integration
+Integration:
+------------
+
+Random Number:
+--------------
+
+Dang's Fast Random Number:
+
+__n = (n-1 + n-2) mod 1__
+
+Generates random numbers based on the remainder of the initial value of two seeds.
 
 
-##Random Number
 
-####Uniform Generator: 
+Integration:
+------------
 
-
-##Matrix
-
-####Multiplication:
-|       |Estimate|Actual|
-|-------|--------|------|
-|time   |  1 s   |      |
+Quadrature: 
+The trapezoidal method partitions the space under the curve into little trapezoids and sums the area for each to generate the total area under the curve. 
 
 
-##Integration 
+Monte Carlo:
+The Monte Carlo uses random numbers to chose the positions within the space. The relation between the area under the curve is `n/N = a/A`
 
-####Quadrature: 
 
-####Monte Carlo:
+Results:
+
+| Method      |      time          |      area            |
+|-------------|--------------------|----------------------|
+| Quadrature  | 14.844221105527637 | 0.080136379072063391 |
+| Monte Carlo | 14.844221105527637 | 0.080136379072063391 |
