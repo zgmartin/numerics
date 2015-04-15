@@ -1,5 +1,5 @@
 ###Finding Roots
-![root] (./root.png?raw=true)
+![root](./root.png?raw=true)
 
 ####Bisection Method:
 
@@ -23,23 +23,23 @@ A value is chosen close to the root, then a closer value is calculated by using 
 
 
 #####Method Comparison:
-|        |Bisection| Newton|
-|--------|---------|-------|
-| speed  | linear| quadratic|
-| converge| always | sometimes|
+|         |Bisection| Newton   |
+|---------|---------|----------|
+| speed   | linear  | quadratic|
+| converge| always  | sometimes|
 
 ####Example:
 
-![plot] (./plot.png?raw=true)
+![plot](./plot.png?raw=true)
 
 By inspection of the graph, the root of the function is approximately at the location x = 1.55.
 
 ####Results:
-|         |Bisection| Newton|
-|---------|---------|---------|
-|interval | [1.5,1.6]| 1.6|
-|iterations| 8       | 3|
-|root      | 1.5191  | 1.5191|
+|          |Bisection | Newton  |
+|----------|----------|---------|
+|interval  | [1.5,1.6]| 1.6     |
+|iterations| 8        | 3       |
+|root      | 1.5191   | 1.5191  |
 
 #####Run:
 ```

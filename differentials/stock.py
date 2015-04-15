@@ -1,5 +1,6 @@
 """
-Stock price completion model between two companies.
+Stock Pricing Problem: 
+A competition model between two companies.
 """
 
 from matplotlib import pyplot
@@ -38,9 +39,18 @@ def euler(step, start, end, initial_values, diffs):
     return outputs
 
 
+#results
 outputs = euler(.0001, 0, 10, (199,21), (company_a,company_b))
 x = [output[0] for output in outputs]
 y = [output[1] for output in outputs]
+
+#fist instance y>=x
+for output in outputs:
+    if output[0]<output[1]:
+        print 'y>=x:', output
+        break
+
+#phase plot
 pyplot.title('Phase Diagram')
 pyplot.ylabel('y')
 pyplot.xlabel('x')
