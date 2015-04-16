@@ -40,20 +40,21 @@ def deng_fast(seeds):
         y = temp
         yield x
 
-"""
-def trapezoid(function, interval):
-    Trapezoidal Integration:
 
+def trapezoid(function, interval):
+    """
+    Trapezoidal Integration:
+    """
     
     x = linspace(interval[0], interval[1])
     h = x[1] - x[0]
     
-    intersum = [f(t)*2 for t in x[1:len(x)-1]]
+    intersum = [function(t)*2 for t in x[1:len(x)-1]]
 
-    area = (sum(intersum) + f(x[0]) + f(x[-1]) * h * 0.5
+    area = (sum(intersum) + function(x[0]) + function(x[-1])) * h * 0.5
     
     return area  
-"""
+
 
 def montecarlo(function, iterations, interval):
     """
@@ -68,18 +69,18 @@ def montecarlo(function, iterations, interval):
         [A: total area]
     """
 
-    in_count = 0 
+    inside = 0 
 
     for i in range(iterations):
         x = random.uniform(interval[0],interval[1])
         y = random.uniform(interval[0],interval[1])
+        
+        if y <= function(x):
+            inside += 1
 
-        if function(x) <= y:
-            in_count += 1
+    total_area = (interval[1]-interval[0])**2
 
-    total_area = pow(interval[1]-interval[0],2)
-
-    area = float(in_count/iterations) * total_area
+    area = float(inside)/iterations * total_area
 
     return area
 
