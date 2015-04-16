@@ -33,8 +33,10 @@ The trapezoidal method partitions the space under the curve into little trapezoi
 
 Monte Carlo:
 
-The Monte Carlo uses random numbers to chose the positions within the space. The relation between the area under the curve is `n/N = a/A`
+`n/N = a/A`
 
+Monte Carlo integration uses randomness to chose the positions within the space. The big idea here is that the number of points selected under the curve in proportion to the total selected points converges to the area under the curve proportional to total area.  
+ 
 
 Results:
 
