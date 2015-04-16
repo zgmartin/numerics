@@ -16,7 +16,7 @@ from matplotlib import pyplot
 from math import sin
 
 #uniform random numbers
-pyplot.title('Deng Fast Random Numbers Distribution')
+pyplot.title('Deng Fast Random Numbers')
 pyplot.ylabel('frequency')
 pyplot.xlabel('intervals')
 
