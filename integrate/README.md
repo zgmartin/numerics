@@ -4,9 +4,9 @@ Integration:
 Random Numbers:
 --------------
 
-![rand](./rand.png)
-
 Deng Fast:
+
+![rand](./rand.png)
 
 `n = (n-1 + n-2) mod 1`
 
