@@ -6,11 +6,11 @@ Random Numbers:
 
 Deng Fast:
 
+![rand](./rand.png)
+
 `n = (n-1 + n-2) mod 1`
 
 Generates random numbers based on the remainder between two seeds. How fast is that? That's [Deng](http://en.wikipedia.org/wiki/Yuefan_Deng) fast!
-
-![rand](./rand.png)
 
 Testing Randomness :
 
