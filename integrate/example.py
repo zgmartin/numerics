@@ -15,6 +15,7 @@ from integrate import deng_fast
 from matplotlib import pyplot
 from math import sin
 
+"""
 #uniform random numbers
 pyplot.title('Deng Fast Random Numbers')
 pyplot.ylabel('frequency')
@@ -43,7 +44,16 @@ pyplot.ylabel('frequency')
 pyplot.xlabel('sums')
 results = pyplot.hist(subsets,200)
 pyplot.show()
+"""
 
+#scatter plot
+generator = deng_fast([time.time(),time.time()])
+x = [10*generator.next() for i in range(10000)]
+y = [10*generator.next() for i in range(10000)]
+colors = [generator.next() for i in range(10000)]
+
+pyplot.scatter(x, y, c=colors, alpha=.3)
+pyplot.show()
 
 #integration problem
 def function(x):
