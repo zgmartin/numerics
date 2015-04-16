@@ -22,11 +22,12 @@ pyplot.xlabel('intervals')
 
 generator = deng_fast([time.time(),time.time()])
 x = [10*generator.next() for i in range(20000000)]
-print x[0:100]
+print 'Deng Random Numbers:',x[0:100]
 results = pyplot.hist(x,20)
-pyplot.show()
+pyplot.close()
+#pyplot.show()
 
-"""
+results = results[0]
 n = 20000000.0
 percentages = map(lambda x: x/n, results)
 n = len(percentages)
@@ -35,6 +36,11 @@ print 'percent average:', average
 
 #sum subset 20 random numbers in list
 subsets = [sum(x[i:i+20]) for i in xrange(0,len(x),20)]
+print 'subsets:', subsets[0:10]
+print 'subset max:', max(subsets)
+pyplot.title('Sum 20 Subset')
+pyplot.ylabel('frequency')
+pyplot.xlabel('sums')
 results = pyplot.hist(subsets,200)
 pyplot.show()
 
@@ -43,4 +49,3 @@ pyplot.show()
 def function(x):
     return sin(x)/x
 
-"""
