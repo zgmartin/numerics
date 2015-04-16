@@ -53,6 +53,7 @@ y = [10*generator.next() for i in range(10000)]
 colors = [generator.next() for i in range(10000)]
 
 pyplot.scatter(x, y, c=colors, alpha=.3)
+pyplot.axis('off')
 pyplot.show()
 
 #integration problem
