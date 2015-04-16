@@ -10,6 +10,9 @@ Deng Fast:
 
 Generates random numbers based on the remainder of the initial value of two seeds. 
 
+Distribution:
+![deng](./deng.png)
+
 That's Deng fast! Inspired by professor [Deng](http://en.wikipedia.org/wiki/Yuefan_Deng).
 
 

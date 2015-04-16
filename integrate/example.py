@@ -1,15 +1,32 @@
+"""
+Random Number Problem:
+
+Test random number generator's randomness 
+
+
+Integration Problem:
+
+integrate f(x) = sin(x)/x using Monte Carlo and Quad
+
+"""
+
 import time
-from integrate import generator
+from integrate import deng_fast
 from matplotlib import pyplot
 from math import sin
 
 #uniform random numbers
-r = rand(time.time())
-x = [r.next() for i in range(20000000)]
+pyplot.title('Deng Fast Random Numbers')
+pyplot.ylabel('frequency')
+pyplot.xlabel('intervals')
+
+generator = deng_fast([time.time(),time.time()])
+x = [10*generator.next() for i in range(20000000)]
 print x[0:100]
 results = pyplot.hist(x,20)
-results = results[0]
+pyplot.show()
 
+"""
 n = 20000000.0
 percentages = map(lambda x: x/n, results)
 n = len(percentages)
@@ -22,6 +39,8 @@ results = pyplot.hist(subsets,200)
 pyplot.show()
 
 
-#integration 
+#integration problem
 def function(x):
     return sin(x)/x
+
+"""

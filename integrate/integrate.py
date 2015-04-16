@@ -26,7 +26,9 @@ def rand(seed):
 
 def deng_fast(seeds):
     """
-    Deng's fast random number.
+    Deng's fast random number generator.
+
+    That's Deng fast!
     """
 
     x = seeds[0]
