@@ -1,19 +1,20 @@
 Integration:
 ------------
 
-Random Number:
+Random Numbers:
 --------------
 
 Deng Fast:
 
 `n = (n-1 + n-2) mod 1`
 
-Generates random numbers based on the remainder of the initial value of two seeds. 
+Generates random numbers based on the remainder of the value of two seeds. How fast is that? That's [Deng](http://en.wikipedia.org/wiki/Yuefan_Deng) fast!
+
+Testing Randomness :
+
+What does it mean to be random? Randomness is not a well defined concept. The only way to judge randomness is through a relative comparison of numbers based on statistical analysis. Below are some statistical tests performed on Deng's Fast Random Numbers. 
 
 ![deng](./deng.png)
-
-That's Deng fast! Inspired by professor [Deng](http://en.wikipedia.org/wiki/Yuefan_Deng).
-
 
 
 Integration:
