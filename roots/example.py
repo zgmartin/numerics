@@ -1,3 +1,8 @@
+"""
+Root Finding Problem:
+Finding roots of specific function. 
+"""
+
 from roots import bisection, newton
 from math import sin, cos, exp
 
