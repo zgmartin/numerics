@@ -20,15 +20,15 @@ What does it mean to be random? The answer is relative to your information. The 
 
 Distribution Test:
 
-![dist](./dist.png)
-
 A test for generator uniformity by counting the number of each random number falls inside an interval.
+
+![dist](./dist.png)
 
 Summation Test:
 
-![sum](./sum.png)
-
 The number of random numbers sum from a subset of the total list of generated random numbers.
+
+![sum](./sum.png)
 
 Integration:
 ------------
