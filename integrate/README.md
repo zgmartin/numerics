@@ -18,7 +18,7 @@ What does it mean to be random? The answer is relative to your information. The 
 
  Randomness is not a well defined concept. The only way to judge randomness is through a relative comparison of numbers based on statistical analysis. Below are some statistical tests performed on the Deng fast random number generator. 
 
-![deng](./deng.png)
+![dist](./dist.png)
 
 ![sum](./sum.png)
 
