@@ -21,12 +21,12 @@ pyplot.title('Deng Fast Random Numbers')
 pyplot.ylabel('frequency')
 pyplot.xlabel('intervals')
 
-generator = integrate.deng_fast([time.time(),time.time()])
-x = [10*generator.next() for i in range(20000000)]
+generator = integrate.deng_random([time.time(),time.time()])
+x = [generator.next() for i in range(20000000)]
 print 'Deng Random Numbers:',x[0:100]
 results = pyplot.hist(x,20)
+pyplot.show()
 pyplot.close()
-#pyplot.show()
 
 results = results[0]
 n = 20000000.0

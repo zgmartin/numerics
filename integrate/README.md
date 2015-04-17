@@ -4,7 +4,7 @@ Integration:
 Random Numbers:
 --------------
 
-Deng Fast:
+Deng Fast Random Numbers:
 
 ![rand](./rand.png)
 

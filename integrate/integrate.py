@@ -24,10 +24,11 @@ def rand(seed):
         yield seed
 
 
-def deng_fast(seeds):
+def deng_random(seeds):
     """
-    Deng's fast random number generator.
+    Deng's fast random number generator. 
 
+    Inspired by professor Yuefan Deng at Stony Brook University.
     That's Deng fast!
     """
 
