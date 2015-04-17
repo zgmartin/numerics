@@ -3,7 +3,7 @@
 ###About:
 A collection of Numerical Analysis Methods
 
-##Random
+##Randomness
 
 ![rand](./integrate/rand.png)
 
@@ -13,7 +13,7 @@ Random numbers
 
 ![root](./roots/root.png)
 
-Finds solutions x such that f(x) = 0
+Finding Roots x : f(x) = 0
 
 ##Integrate 
 
