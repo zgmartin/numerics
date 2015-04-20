@@ -18,19 +18,18 @@ y(t+h) = y(t) + h * y'
 Ballistics Problem:
 -----------------
 
-Problem:
+![dist](./distance.png) 
 
-Calculate the total time the bullet is in the air.
+Problem: Calculate the total time the bullet is in the air.
 
-![plot](./velocity.png?raw=true)
-
+![vel](./velocity.png)
 
 Results:
 
 | direction   |      time          |      velocity        |
 |-------------|--------------------|----------------------|
-| up          | 14.844221105527637 | 0.080136379072063391 |
-| down        | 14.844221105527637 | 0.080136379072063391 |
+| up          | 14.013             | 0.00141630056777     |
+| down        | 14.014             |  -299.97252056       |
 
 
 
@@ -39,7 +38,7 @@ Stock Market:
 
 Modeling competition between stock prices. 
 
-![plot](./phase.png?raw=true)
+![plot](./phase.png)
 
 Results:
 

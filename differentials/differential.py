@@ -6,24 +6,25 @@ Methods:
     Runge-Kutta
 """
 
-def euler(inputs, initial_values, differetial):
+def euler(step, iterations, initial_values, differetial):
     """
     Euler Method:
         Approximate curve by moving small steps tangential to the initial value.
     """
-
+    inputs = []
     outputs = []
-    step = inputs[1]-inputs[0]
 
     #base case
     base = initial_values[1] + step * differetial(initial_values[1])
+    inputs.append(initial_values[0])
     outputs.append(base)
 
-    for i in inputs:
+    for i in range(iterations):
+        inputs.append(inputs[-1]+step)
         output = outputs[-1] + step * differetial(outputs[-1])
         outputs.append(output)
 
-    return outputs
+    return inputs, outputs
 
 def runge_kutta(step, y, differetial):
     """
@@ -55,3 +56,28 @@ def runge_integral(step, initial_values, stop, differetial):
     return inputs, outputs
 
 
+def list_sum(lis):
+    """
+    Generates a sum of a list of values based off the previous values.
+    """
+    transforms = [lis.pop(0)]
+
+    for item in lis:
+        transforms.append(transforms[-1]+item)
+    
+    return transforms
+
+
+def find_index(number, lis):
+    """
+        Finds closest positive index value in a list. 
+    """
+    closest = lis[0]
+    index = 0
+
+    for n in range(len(lis)):
+        if lis[n]>=0 and abs(lis[n] - number) < abs(closest - number):
+            closest = lis[n]
+            index = n
+    print closest
+    return index

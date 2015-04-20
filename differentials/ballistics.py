@@ -1,9 +1,12 @@
 """
 Ballistics Problem:
+
+
 """
 import numpy
 import differential
 from matplotlib import pyplot
+import bisect
 
 
 def force(velocity):
@@ -15,88 +18,43 @@ def force(velocity):
     gravity = 9.8
     friction = .001
 
-    return -gravity - friction/mass*velocity
-
-def force_down(velocity):
-    """
-    Models the movement of a bullet moving in space.
-    """
-
-    mass = .01 
-    gravity = 9.8
-    friction = .001
-
-    return gravity - friction/mass*velocity
-
-
-#results
-pyplot.title('Ballistics')
-pyplot.ylabel('velocity')
-pyplot.xlabel('time')
-
-#plot
-x = numpy.linspace(1,20, 200)
-y = differential.euler(x,(0,300),force)
-
-absolutes = [abs(a) for a in y]
-index = absolutes.index(min(absolutes))
-
-print 'zero: ' + str(x[index]) + ',' + str(y[index])
-
-pyplot.scatter(x[index],y[index], s=80, facecolors=None, edgecolors='r')
-pyplot.plot(x,y[1:])
-
-#plot 2
-y = differential.euler(x,(0,0),force_down)
-
-absolutes = [abs(a) for a in y]
-index = absolutes.index(min(absolutes))
-
-print 'zero: ' + str(x[index]) + ',' + str(y[index])
-
-pyplot.scatter(x[index],y[index], s=80, facecolors=None, edgecolors='r')
-pyplot.plot(x,y[1:])
-
-pyplot.show()
-
-
-
-
-
-
-#Ballistics Problem
-def force(velocity):
-    """
-    Models the movement of a bullet moving in space.
-    """
-    mass = .1 
-    gravity = 9.8
-    friction = 0.001
-
-    if velocity>0:
-        return -gravity - friction/mass*velocity**1.5
+    if velocity>=0: 
+        return -gravity - friction/mass*velocity
 
     else:
         return -(gravity - friction/mass*velocity)
 
 
+
+
+points = differential.euler(.001, 1000000, (0,300),force)
+
 #results
+times = points[0]
+velocities = points[1]
+zero_index = differential.find_index(0,velocities)
+time_up = times[zero_index]
+print 'up time:', time_up
+
+distances = differential.list_sum(velocities)
+zero_index = differential.find_index(0, distances)
+distances = distances[:zero_index+1]
+times = times[:zero_index+1]
+velocities = velocities[:zero_index+1]
+print 'distance:', times[-1], distances[-1]
+print 'down time:', times[-1] - time_up
+print 'down velocity:', velocities[-1]
+
+#plots
+pyplot.title('Ballistics')
+pyplot.ylabel('distance')
+pyplot.xlabel('time')
+pyplot.plot(times, distances)
+pyplot.show()
+pyplot.close()
+
 pyplot.title('Ballistics')
 pyplot.ylabel('velocity')
 pyplot.xlabel('time')
-
-#generates plots for different initial velocities
-plots = [runge_integral(1, (0,v), 50, force) for v in range(300,550,50)]
-
-distances = []
-for plot in plots:
-    distance = 0
-    for d in plot[1]:
-        if d < 0: 
-            break
-        else:
-            distance += d 
-    distances.append(distance)
-print distances
-
-
+pyplot.plot(times, velocities)
+pyplot.show()
