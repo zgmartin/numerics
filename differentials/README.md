@@ -5,14 +5,12 @@ Differential Equations:
 Euler Method:
 -------------
 
-Approximate curve by moving small steps tangential to the initial value.
-
-Derivation:
-
 ```
 y' = [y(t+h) - y(t)] / h
 y(t+h) = y(t) + h * y'
 ```
+
+Approximate curve by moving small steps tangential to the initial value.
 
 
 Ballistics Problem:
