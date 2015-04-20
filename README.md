@@ -17,6 +17,6 @@ Finding Roots x : f(x) = 0
 
 ##Integrate 
 
-[monte](./integrate/monte_carlo.png)
+![monte](./integrate/monte_carlo.png)
 
 Finds area under f(x)
