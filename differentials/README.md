@@ -16,11 +16,11 @@ Approximate curve by moving small steps tangential to the initial value.
 Ballistics Problem:
 -----------------
 
-![dist](./distance.png) ![vel](./velocity.png)
+![dist](./distance.png)
 
-`dv/dt = g + a/m*v`
+`dv/dt = g + (a/m)*v`
 
-Problem: Calculate the total time the bullet is in the air.
+Calculate the total time the bullet is in the air.
 
 Results:
 
@@ -36,14 +36,22 @@ Stock Market:
 
 ![plot](./phase.png)
 
-Modeling competition between stock prices. 
+```
+x' = (a)x + (b)xy
+y' = (c)y + (e)xy
+```
+
+Modeling competition between stock prices.
 
 Results:
 
-| stock       |      time          |      value           |
-|-------------|--------------------|----------------------|
-| x           |         4          | 77.8889199659        |
-| y           |         4          | 479.212120381        |
+| stock       |      time          |      value           |    y>=x            |
+|-------------|--------------------|----------------------|--------------------|
+| x           |         4          | 77.8889199659        | 112.86717730768805 |
+| y           |         4          | 479.212120381        | 112.86559624322435 |
 
 
-y>=x: (112.86559624322435, 112.86717730768805)
+Flight Path:
+------------
+
+Landing a plane at an airport based on initial value conditions.
