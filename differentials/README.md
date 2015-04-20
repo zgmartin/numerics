@@ -16,13 +16,11 @@ Approximate curve by moving small steps tangential to the initial value.
 Ballistics Problem:
 -----------------
 
-![dist](./distance.png) 
+![dist](./distance.png) ![vel](./velocity.png)
 
 `dv/dt = g + a/m*v`
 
 Problem: Calculate the total time the bullet is in the air.
-
-![vel](./velocity.png)
 
 Results:
 
@@ -36,9 +34,9 @@ Results:
 Stock Market:
 -------------
 
-Modeling competition between stock prices. 
-
 ![plot](./phase.png)
+
+Modeling competition between stock prices. 
 
 Results:
 
