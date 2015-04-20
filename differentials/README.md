@@ -18,6 +18,8 @@ Ballistics Problem:
 
 ![dist](./distance.png) 
 
+`dv/dt = g + a/m*v`
+
 Problem: Calculate the total time the bullet is in the air.
 
 ![vel](./velocity.png)
