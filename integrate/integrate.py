@@ -57,7 +57,7 @@ def trapezoid(function, interval):
     return area  
 
 
-def montecarlo(function, iterations, interval):
+def montecarlo(function, random_ins, random_outs):
     """
     Monte Carlo Integration:
         Uses randomness to approximate area under function.
@@ -70,20 +70,16 @@ def montecarlo(function, iterations, interval):
         [A: total area]
     """
 
-    inside = 0 
+    outputs = map(function, random_ins)
+    insides = [ i for i,j in zip(random_outs,outputs) if i<=j and j>0]
 
-    for i in range(iterations):
-        x = random.uniform(interval[0],interval[1])
-        y = random.uniform(interval[0],interval[1])
-        
-        if y <= function(x):
-            inside += 1
-
-    total_area = (interval[1]-interval[0])**2
-
-    area = float(inside)/iterations * total_area
+    total_area = (max(random_ins)-min(random_ins))*(max(random_outs)-min(random_outs))
+    area = float(len(insides))/len(random_ins) * total_area
 
     return area
+
+
+
 
     
 

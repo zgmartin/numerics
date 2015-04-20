@@ -14,6 +14,8 @@ import time
 import integrate 
 from matplotlib import pyplot
 from math import sin, e
+import numpy
+import random
 
 """
 #uniform random numbers
@@ -58,16 +60,32 @@ pyplot.show()
 """
 
 
-#integration problem
-def function(x):
-    return sin(x)/x
 
+
+#functions
+def f(x):
+    return sin(x)/x
 def ex(x):
     return pow(e,x)
 
-#monte carlo
-area = integrate.montecarlo(function, 10000, [0,2])
+#random numbers
+inputs = [random.uniform(-10,10) for x in range(100000)]
+outputs = [random.uniform(-10,10) for x in range(100000)]
+points = zip(inputs,outputs)
+#area
+area = integrate.montecarlo(f, inputs, outputs)
 print 'monte carlo:', area
-
 area = integrate.trapezoid(ex, [0,10])
 print 'trapezoid:', area
+
+in_points = [ (i,j) for i,j in points if j<=f(i) and j>=0] 
+in_points = zip(*in_points)
+
+#plots
+x = numpy.linspace(-10,10)
+y = map(f,x)
+pyplot.plot(x,y)
+outs = map(f, inputs)
+pyplot.scatter(in_points[0], in_points[1], c=in_points[1], alpha=.3)
+pyplot.axis('off')
+pyplot.show()
