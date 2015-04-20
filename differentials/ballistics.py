@@ -27,7 +27,7 @@ def force(velocity):
 
 
 
-points = differential.euler(.001, 1000000, (0,300),force)
+points = differential.euler(.0001, 1000000, (0,300),force)
 
 #results
 times = points[0]
