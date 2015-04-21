@@ -2,7 +2,7 @@ Differential Equations:
 -----------------------
 
 
-Euler Method:
+Euler's Method:
 -------------
 
 ```
@@ -11,6 +11,15 @@ y(t+h) = y(t) + h * y'
 ```
 
 Approximate curve by moving small steps tangential to the initial value.
+
+Heun's Method:
+--------------
+
+
+Runge-Kutta:
+------------
+
+A more generalized form of Euler's Method for solving differential equations.
 
 
 Ballistics Problem:
