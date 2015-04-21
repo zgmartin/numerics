@@ -7,12 +7,12 @@ Euler's Method:
 
 ![euler](./euler.png)
 
+Approximate curve by moving small steps tangential to the initial value.
+
 ```
 y' = [y(t+h) - y(t)] / h
 y(t+h) = y(t) + h * y'
 ```
-
-Approximate curve by moving small steps tangential to the initial value.
 
 Heun's Method:
 --------------
