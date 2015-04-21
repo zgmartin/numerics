@@ -17,7 +17,7 @@ Approximate curve by moving small steps tangential to the initial value.
 Heun's Method:
 --------------
 
-`y(t+h) = y(t) + h * (1/2) y'+ ~y'`
+`y(t+h) = y(t) + h * (1/2) [y'+ ~y']`
 
 The average between two tangent lines to approximate the function more accurately
 

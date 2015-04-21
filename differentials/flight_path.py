@@ -23,7 +23,7 @@ def traj_heun(x,y):
     Height of plane as a function of its distance.  
     """
     w = 150
-    v = 120
+    v = 150
     k = float(w)/v
 
     return float(y)/x - k*math.sqrt(1+(float(y)/x)**2)
