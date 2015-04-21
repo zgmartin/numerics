@@ -24,7 +24,7 @@ The average between two tangent lines to approximate the function more accuratel
 Runge-Kutta:
 ------------
 
-A more generalized form of Heun's Method for solving differential equations. Many averages between multiple partitions of the tangent lines. 
+A more generalized form of Heun's Method for solving differential equations. Averages between multiple partitions intervals of the tangent line. 
 
 
 Ballistics:
