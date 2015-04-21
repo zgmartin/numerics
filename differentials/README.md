@@ -45,14 +45,14 @@ Results:
 Stock Market:
 -------------
 
-![plot](./phase.png)
+Modeling competition between stock prices.
 
 ```
 x' = (a)x + (b)xy
 y' = (c)y + (e)xy
 ```
 
-Modeling competition between stock prices.
+![plot](./phase.png)
 
 Results:
 
@@ -66,3 +66,7 @@ Flight Path:
 ------------
 
 Landing a plane at an airport based on initial value conditions.
+
+`y' = y/x - w/v*sqrt(1 + (x/y)^2)`
+
+![treg](./trejectory.png)
