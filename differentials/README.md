@@ -5,6 +5,8 @@ Differential Equations:
 Euler's Method:
 -------------
 
+![euler](./euler.png)
+
 ```
 y' = [y(t+h) - y(t)] / h
 y(t+h) = y(t) + h * y'
@@ -22,7 +24,7 @@ Runge-Kutta:
 A more generalized form of Euler's Method for solving differential equations.
 
 
-Ballistics Problem:
+Ballistics:
 -----------------
 
 ![dist](./distance.png)
