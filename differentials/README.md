@@ -45,14 +45,14 @@ Results:
 Stock Market:
 -------------
 
-Modeling competition between stock prices.
+![plot](./phase.png)
 
 ```
 x' = (a)x + (b)xy
 y' = (c)y + (e)xy
 ```
 
-![plot](./phase.png)
+Modeling competition between stock prices.
 
 Results:
 
@@ -69,4 +69,7 @@ Landing a plane at an airport based on initial value conditions.
 
 `y' = y/x - w/v*sqrt(1 + (x/y)^2)`
 
+Euler Method:
+
 ![trag](./trajectory.png)
+
