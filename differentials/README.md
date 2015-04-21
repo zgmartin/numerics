@@ -17,14 +17,19 @@ Approximate curve by moving small steps tangential to the initial value.
 Heun's Method:
 --------------
 
-`y(t+h) = y(t) + h * (1/2) [y'+ ~y']`
+```
+~y' = y(t) + h * y'
+y(t+h) = y(t) + h * (1/2)[y'+ ~y']
+```
 
 The average between two tangent lines to approximate the function more accurately
 
 Runge-Kutta:
 ------------
 
-A more generalized form of Heun's Method for solving differential equations. Averages between multiple partitions intervals of the tangent line. 
+`y(t+h) = y(t) + h * (1/6)[k_1 + (2)k_2 + (2)k_3 + k_4]`
+
+A more generalized form of [Heun's Method](http://en.wikipedia.org/wiki/Heun%27s_method) for solving differential equations. Averages between multiple partitions intervals of the tangent line. 
 
 
 Ballistics:
