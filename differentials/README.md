@@ -7,31 +7,34 @@ Euler's Method:
 
 ![euler](./euler.png)
 
-Approximate curve by moving small steps tangential to the initial value.
-
 ```
 y' = [y(t+h) - y(t)] / h
 y(t+h) = y(t) + h * y'
 ```
 
+Approximate curve by moving small steps tangential to the initial value.
+
 Heun's Method:
 --------------
 
+`y(t+h) = y(t) + h * (1/2) y'+ ~y'`
+
+The average between two tangent lines to approximate the function more accurately
 
 Runge-Kutta:
 ------------
 
-A more generalized form of Euler's Method for solving differential equations.
+A more generalized form of Heun's Method for solving differential equations. Many averages between multiple partitions of the tangent lines. 
 
 
 Ballistics:
 -----------------
 
-![dist](./distance.png)
+Calculate the total time the bullet is in the air.
 
 `dv/dt = g + (a/m)*v`
 
-Calculate the total time the bullet is in the air.
+![dist](./distance.png)
 
 Results:
 
@@ -45,14 +48,15 @@ Results:
 Stock Market:
 -------------
 
-![plot](./phase.png)
+Modeling competition between stock prices.
 
 ```
 x' = (a)x + (b)xy
 y' = (c)y + (e)xy
 ```
 
-Modeling competition between stock prices.
+![phase](./phase.png)
+
 
 Results:
 
@@ -68,8 +72,6 @@ Flight Path:
 Landing a plane at an airport based on initial value conditions.
 
 `y' = y/x - w/v*sqrt(1 + (x/y)^2)`
-
-Euler Method:
 
 ![trag](./trajectory.png)
 
