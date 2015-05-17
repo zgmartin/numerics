@@ -6,4 +6,4 @@ Annealing:
 >Heinz Pagels- [Dreams of Reason](http://www.goodreads.com/book/show/694929.The_Dreams_of_Reason)
 
 
-![out](./output.mp4)
+![out](./output.gif)
