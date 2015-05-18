@@ -1,28 +1,30 @@
 import random
 import math
 import time
-from matplotlib import pyplot
+from matplotlib import pyplot, animation
+
 
 def potential(location_a, location_b):
     """
-    The potential energy between two particles.
+    Lennard-Jones energy potential between two particles.
+
     """
     r = math.sqrt((location_b[0]-location_a[0])**2 + (location_b[1]-location_a[1])**2)
     return 1/r**12 - 2/r**6
 
-def energy(locations):
+def energy(particles):
     """
     The total system energy between multiple particles.
     """
     total_energy = 0
 
-    for i in range(len(locations)):
-        for location in locations[i+1:]:
-            total_energy += potential(locations[i],location)
+    for i in range(len(particles)):
+        for location in particles[i+1:]:
+            total_energy += potential(particles[i],location)
 
-    return total_energy 
+    return float(total_energy)/2 
 
-def move_particle(location,distance):
+def move(location,distance):
     """
     A random movement of a particle.
     """
@@ -33,33 +35,36 @@ def move_particle(location,distance):
 
 
 
-locations = [(random.uniform(0,10),random.uniform(0,10)) for n in range(10)]
-system_energy = energy(locations)
+#particle initialization
+particles = [(random.uniform(0,10),random.uniform(0,10)) for n in range(10)]
+system_energy = energy(particles)
 
-print 'points:', locations
+#results
+print 'points:', particles
 print 'energy:', system_energy
-coords = zip(*locations) 
+coords = zip(*particles) 
 pyplot.scatter(coords[0],coords[1])
 pyplot.axis('off')
 pyplot.show()
-pyplot.clear()
 
-for n in range(10):
-    system_energy = energy(locations)
-
-    for n in range(len(locations)):
-        old_energy = energy(locations)
-        location = locations.pop(n)
-        new_location = move_particle(location,1)
-        locations.append(new_location)
-        new_energy = energy(locations)
+#simulation 
+for time_step in range(10):
+    system_energy = energy(particles)
+    
+    #change position of particles
+    for n in range(len(particles)):     
+        old_energy = energy(particles)
+        particle = particles.pop(n)
+        new_particle = move(particle,1)
+        particles.append(new_particle)
+        new_energy = energy(particles)
         if new_energy > old_energy:
-            locations.pop()
-            locations.append(location)
-            #print 'new energy:', new_energy, old_energy
-            #time.sleep(1)
-
-print 'energy:', energy(locations)
-coords = zip(*locations) 
-pyplot.scatter(coords[0],coords[1])
-
+            particles.pop()
+            particles.append(particle)
+    print 'sys energy:', system_energy
+    time.sleep(1)
+    #results
+    coords = zip(*particles) 
+    pyplot.scatter(coords[0],coords[1])
+    pyplot.axis('off')
+    pyplot.show()

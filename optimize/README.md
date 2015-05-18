@@ -7,3 +7,9 @@ Annealing:
 
 
 ![animate](./animate.gif)
+
+
+Energy Minimization:
+--------------------
+
+![particles](./particle.gif)
