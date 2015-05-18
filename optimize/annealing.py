@@ -42,18 +42,6 @@ def change(solution):
 
     return solution 
 
-def sample(space,size):
-    """
-    Random sample from the space.
-    """
-    sample = []
-    
-    for n in range(size):
-        choice = random.choice(space)
-        sample.append(choice)
-    
-    return sample
-
 def probability(solution, new_solution, temperature):
     """
     Acceptance function for transition between two energy states.
@@ -81,7 +69,7 @@ def anneal(space, size, temperature=1, decrement=.01, iterations=100):
                 reduce temp
     """
 
-    solution = sample(space,size)
+    solution = random.sample(space,size)
 
     while(temperature>=0):
         for n in range(iterations):
@@ -89,7 +77,7 @@ def anneal(space, size, temperature=1, decrement=.01, iterations=100):
             if new_solution<solution:
                 solution = new_solution
             elif probability(solution, new_solution, temperature)>random.uniform(0,1):
-                solution = sample(space,size)
+                solution = random.sample(space,size)
 
         print 'temp:', temperature, cost(solution)
         temperature= temperature-decrement
@@ -101,4 +89,4 @@ def anneal(space, size, temperature=1, decrement=.01, iterations=100):
 space = [(6.623123,2.253046),(4.723182,1,949215),(2.346305,4.202261),(7.069488,6.151476),
         (0.415793,1.353737),(7.485281,7.505212),(7.901073,8.858949),(6.386353,7.223111)]
 
-anneal(space, 3)
+print 'solution:', anneal(space, 3)
