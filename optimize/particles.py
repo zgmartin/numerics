@@ -36,7 +36,8 @@ def move(location,distance):
 
 
 #particle initialization
-particles = [(random.uniform(0,10),random.uniform(0,10)) for n in range(10)]
+#particles = [(random.uniform(0,10),random.uniform(0,10)) for n in range(10)]
+particles = [(0,0),(10,0),(5,5),(0,10),(10,10)]
 system_energy = energy(particles)
 
 #results
@@ -48,7 +49,7 @@ pyplot.axis('off')
 pyplot.show()
 
 #simulation 
-for time_step in range(10):
+for time_step in range(100):
     system_energy = energy(particles)
     
     #change position of particles
@@ -61,10 +62,9 @@ for time_step in range(10):
         if new_energy > old_energy:
             particles.pop()
             particles.append(particle)
-    print 'sys energy:', system_energy
-    time.sleep(1)
-    #results
-    coords = zip(*particles) 
-    pyplot.scatter(coords[0],coords[1])
-    pyplot.axis('off')
-    pyplot.show()
+#results
+print 'energy:', energy(particles)
+coords = zip(*particles) 
+pyplot.scatter(coords[0],coords[1])
+pyplot.axis('off')
+pyplot.show()
