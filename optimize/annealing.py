@@ -51,7 +51,7 @@ def probability(solution, new_solution, temperature):
     delta = cost(solution) - cost(new_solution)
     boltzmann = constants.k
 
-    return math.e**(-delta/boltzmann*temperature)
+    return math.e**(delta/boltzmann*temperature)
 
 def anneal(space, size, temperature=1, decrement=.01, iterations=100):
     """
@@ -64,7 +64,7 @@ def anneal(space, size, temperature=1, decrement=.01, iterations=100):
                     random change from solution
                     if change less than old:
                         change solution
-                    else if p = e^(-delta/temp)>rand:
+                    else if p = e^(delta/temp)>rand:
                         change solution
                 reduce temp
     """
@@ -73,13 +73,17 @@ def anneal(space, size, temperature=1, decrement=.01, iterations=100):
 
     while(temperature>=0):
         for n in range(iterations):
-            new_solution = change(solution)
-            if new_solution<solution:
+            
+            new_solution = random.sample(space,size)
+            
+            if cost(new_solution)<cost(solution):
                 solution = new_solution
-            elif probability(solution, new_solution, temperature)>random.uniform(0,1):
-                solution = random.sample(space,size)
+
+            if probability(solution, new_solution, temperature)>random.uniform(0,1):
+                solution = new_solution
 
         print 'temp:', temperature, cost(solution)
+        time.sleep(1)
         temperature= temperature-decrement
 
     return solution
