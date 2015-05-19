@@ -29,6 +29,6 @@ Find f(x) : y' = f'(x) and f(x) = a
 
 ##Optimization:
 
-![min](./min.gif)
+![min](./optimize/min.gif)
 
 Finding the smallest value in space. 
