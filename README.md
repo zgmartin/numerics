@@ -26,3 +26,9 @@ Finds area under f(x)
 ![euler](./differentials/euler.png)
 
 Find f(x) : y' = f'(x) and f(x) = a
+
+##Optimization:
+
+![min](./min.gif)
+
+Finding the smallest value in space. 
