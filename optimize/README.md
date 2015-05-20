@@ -21,15 +21,15 @@ Annealing:
 The ideas within annealing were first proposed by Metropolis as he was trying understanding energy state changes of particle systems while working on the Manhattan Project. 
 
 Annealing:
-    guess a solution 
-    initialize temperature
-        iterate 
-            random change from solution
-            if change less than old:
-                change solution
-            else if p = e^(energy_change/temperature) grater than random number:
-                change solution
-           reduce temperature
+    * guess a solution 
+    * initialize temperature
+    * iterate 
+        * random change from solution
+        * if change less than old:
+            * change solution
+        * else if p = e^(energy_change/temperature) grater than random number:
+            * change solution
+        * reduce temperature
 
 Within annealing, the idea is to take a greedy approach to the problem by accepting smaller energy state transitions, while leaving the possibility of accepting a worse state to find the overall smallest value. The hope is that the worse state will result in a smaller energy than the previous.
 
