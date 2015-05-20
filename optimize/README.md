@@ -5,10 +5,11 @@ Minimization:
 
 The goal of minimization is to search for the smallest value over the global space. Selecting the right direction to move is important in finding the minimum value. 
 
-Localized search can be performed to move towards selecting a minimum, but runs into the problem of getting stuck smallest spot.
+Localized search can be performed to move towards selecting a minimum, but has the problem of getting stuck in local small holes.
 
 A global transition can be applied to break out from the localized position with the hope of finding a global minimum. 
 
+Thats all we can do is hope. Hope that we chose the right path and the smallest value will be found within a a sea of points.
 
 Annealing:
 ----------
@@ -17,7 +18,9 @@ Annealing:
 
 >Heinz Pagels- [Dreams of Reason](http://www.goodreads.com/book/show/694929.The_Dreams_of_Reason)
 
-The concepts within annealing were first proposed as an idea by Metropolis in understanding state changes of particles while working on the Manhattan Project. 
+The ideas within annealing were first proposed by Metropolis as he was trying understanding energy state changes of particle systems while working on the Manhattan Project. 
+
+Within annealing, the idea is to take a greedy approach to the problem by accepting smaller energy state transitions, while leaving the possibility of accepting a worse state. The hope is that the worse state will result in a smaller energy than the previous.
 
 
 
