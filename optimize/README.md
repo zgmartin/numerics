@@ -1,7 +1,7 @@
 Minimization:
 -------------
 
-![animate](./animate.gif)
+![min](./min.gif)
 
 The goal of minimization is to search for the smallest value over the global space. Selecting the right direction to move is important in finding the minimum value. 
 
