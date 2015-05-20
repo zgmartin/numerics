@@ -18,7 +18,7 @@ Annealing:
 
 >Heinz Pagels- [Dreams of Reason](http://www.goodreads.com/book/show/694929.The_Dreams_of_Reason)
 
-The ideas within annealing were first proposed by Metropolis as he was trying understanding energy state changes of particle systems while working on the Manhattan Project. 
+The ideas within annealing were first proposed by [Metropolis](http://en.wikipedia.org/wiki/Nicholas_Metropolis) as he was trying understanding energy state changes of particle systems while working on the [Manhattan Project](http://en.wikipedia.org/wiki/Manhattan_Project). 
 
 * Algorithm:
     * guess a solution 
@@ -38,11 +38,8 @@ The temperature decrease reduces our chances of transitioning to a new position.
 
 
 
-
-
-
-
 Energy Minimization:
 --------------------
 
 ![particles](./particle.gif)
+
