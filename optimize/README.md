@@ -20,7 +20,7 @@ Annealing:
 
 The ideas within annealing were first proposed by Metropolis as he was trying understanding energy state changes of particle systems while working on the Manhattan Project. 
 
-Annealing:
+* Algorithm:
     * guess a solution 
     * initialize temperature
     * iterate 
