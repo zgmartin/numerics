@@ -43,3 +43,18 @@ Energy Minimization:
 
 ![particles](./particle.gif)
 
+Energy minimization of particle systems is the standard way for understanding how optimization problems work. The particles represent collection of combinatorial points, and the energy function represents the cost function we need to minimize for moving the points towards a lower energy. 
+
+In energy minimization the goal is to find the minimum energy of a collection of particles in space. The energy of the collection is computed by the total energy of the each particle relative to its neighbors. 
+
+`v = 1/r^12 - 2/r^16`
+
+The Lenard-Jones potential is a mathematical model that approximates the movement between pairs of neutral atoms. Where r is the distance between two particles and v is the potential movement of the particle.  
+
+`E = 1/2 * sum(v)`
+
+The energy is the total sum of all the potential movements of each particle relative to its neighbors. Each particle uses the Lenard-Jones potential to calculate its movement. The neighboring particles have greater influence on the movement because the short distance carries more weight than particles further away.
+
+The goal is to move the particles towards a direction of minimal energy. This movement towards minimum energy is chosen by selecting random positions to move the particles. The problem with selecting random points is that there are a lot of bad decisions to make and few good ones, so most likely you will be waisting time searching the space for bad results.
+
+To solve the problem of waisted time in searching the space of bad results. 
